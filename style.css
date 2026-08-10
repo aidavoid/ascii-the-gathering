@@ -1,0 +1,58 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #111;
+    color: #88afa9;
+    font-family: "Open Sans", monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px auto 40px;
+}
+
+#imgurl {
+    width: 320px;
+    height: 40px;
+    background: transparent;
+    color: #88afa9;
+    border: none;
+    border-bottom: 1px solid #555;
+    outline: none;
+    padding: 8px 4px;
+    font-family: "Open Sans", monospace;
+    font-size: 14x;
+    transition: border-color 0.2s ease;
+}
+
+#imgurl:focus {border-bottom-color: #88afa9;}
+#imgurl::placeholder {color: #666;}
+
+/*ascii card*/
+#ascii-canvas {
+    width: 400px;
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    image-rendering: pixelated;
+}
+
+@media (max-width: 600px) {
+    .search {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #imgurl {width: 90%;}
+    #change-img-button {width: 90%;}
+    #ascii-canvas {width: 95vw;}
+}
